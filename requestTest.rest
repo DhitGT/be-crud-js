@@ -1,0 +1,60 @@
+
+//create user
+POST http://localhost:5000/users 
+Content-Type: application/json
+
+{
+    "name" : "fahmi",
+    "email" : "fahmi@gmail.com",
+    "password" : "123",
+    "confPassword" : "123",
+    "role" : "user"
+}
+
+###
+//Gett all users
+GET http://localhost:5000/users
+
+###
+//Gett single users (id admin)
+GET http://localhost:5000/users/7bb914d6-b123-4c0d-a83c-068c3c01ed91 
+
+
+###
+//Gett single users (id user)
+GET http://localhost:5000/users/3522da42-54e0-4e3a-8ac6-8cf77c6c38f0
+
+
+###
+//update user
+PATCH  http://localhost:5000/users/3522da42-54e0-4e3a-8ac6-8cf77c6c38f0
+Content-Type: application/json
+
+{
+    "name" : "fahmi",
+    "email" : "fahmi@gmail.com",
+    "password" : "123",
+    "confPassword" : "123",
+    "role" : "user"
+}
+
+### 
+//delete user
+
+DELETE http://localhost:5000/users/3522da42-54e0-4e3a-8ac6-8cf77c6c38f0
+
+###
+//login user
+POST http://localhost:5000/login 
+Content-Type: application/json
+
+{
+    "email" : "admin@gmail.com",
+    "password" : "123"
+}
+###
+//get me
+GET http://localhost:5000/me 
+###
+//LogOut
+DELETE http://localhost:5000/logout
